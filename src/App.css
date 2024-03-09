@@ -1,38 +1,451 @@
-.App {
-  text-align: center;
+.app{
+  display: flex;
+  height: 100vh;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 10px; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar{
+  border-right: 1px solid  #e8f5fe;
+  flex: 0.3;
+  min-width: 250px;
+  margin-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px; 
+}
+.sidebar__twitterIcon{
+  color: #50b7f5 !important;
+  font-size: 30px !important;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+
+
+
+
+
+.sidbar0ption{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.sidbar0ption  .MuiSvgIcon-root {
+  padding: 20px;
+}
+.sidbar0ption h2{
+  font-weight: 800;
+  font-size: 20px;
+  margin-right: 20px;
+}
+.sidebar0ption--active{
+  color: #50b7f5;
+}
+.sidbar0ption:hover{
+  background-color: #e8f5fe;
+  border-radius: 30px;
+  color: #50b7f5;
+  transition: color 100ms ease-out;
+}
+.sidbar__twee{
+  background-color: #50b7f5 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 50px !important;
+  height: 50px !important;
+  margin-top: 20px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+/**/
+/**/
+/**/
+/**/
+/**/
+.burger::-webkit-scrollbar {
+  display: none;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+
+
+
+
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed{
+  flex: 0.4;
+  border-right: 1px solid #e8f5fe ;
+  overflow-y: scroll;
+  min-width: fit-content;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  
+}
+.feed__header{
+  position: sticky;
+  top: 0px;
+  background-color: white;
+  z-index: 100;
+  border: 1px solid #e8f5fe ;
+  padding: 10px 20px;
+  display: flex ;
+  justify-content: space-between;
+}
+.feed__header h2{
+  font-size: 20px;
+  font-weight: 800;
+}
+.feed__header .MuiSvgIcon-root{
+ font-size: 40px;
+ color: #50b7f5;
+}
+
+
+
+
+
+
+.widget{
+  flex: 0.3;
+}
+.widget__input{
+  display: flex;
+  align-items: center;
+  background-color: #e8f5fe;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.widget__input input{
+  border: none;
+  background-color: #e8f5fe;
+}
+.widget__search{
+  color: gray;
+}
+.widget__widgetcontainer{
+  margin-top: 15px;
+  margin-left: 20px;
+  background-color: #e8f5fe;
+  padding: 20px;
+  border-radius: 20px;
+}
+.widget__widgetcontainer h2{
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+
+
+
+
+
+.tweetbox{
+  padding-bottom: 10px;
+  border: 8px solid #e8f5fe ;
+  padding-right: 10px;
+}
+.tweetbox form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.tweetbox__input{
+  padding: 20px;
+  display: flex;
+}
+.tweetbox__input input{
+  flex: 1;
+  margin-left: 20px;
+  font-size: 20px;
+  border: none;
+}
+.tweetbutton{
+  background-color: #50b7f5 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 900 !important;
+  text-transform: inherit !important;
+  border-radius: 30px !important;
+  width: 80px !important;
+  height: 40px !important;
+  margin-top: 20px !important;
+  margin-left: auto !important;
+}
+.tweetbox__imginput{
+  border: none;
+  padding: 10px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+
+.post{
+  display: flex;
+  align-items: flex-start;
+  border-bottom: 1px solid #e8f5fe;
+  padding-bottom: 10px;
+}
+.post__body{
+  flex: 1;
+  padding: 10px;
+}
+.post__footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.post__body img{
+  border-radius: 20px;
+}
+.post__badge{
+  font-size: 18px !important;
+  color: #50b7f5;
+}
+.post__headerspecial{
+  font-weight: 600;
+  font-size: 12px;
+  color: gray;
+}
+.post__headerdesc{
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.post__avatar{
+  padding: 20px;
+}
+.post img{
+  width: 500px;
+}
+.post__headertext{
+  display: flex;
+  justify-content: space-between;
+}
+.post__headertext button{
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.post__headertext .MuiSvgIcon-root{
+ padding: 5px;
+ font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+.sign{
+  margin: auto;
+  text-align: center;
+/* background-image: url(C:\Users\ahmed\twitter-clone\public\img3.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+.sign .name{
+  display: flex;
+  padding: 20px ;
+  gap: 30px;
+  width: 120;
+  height: 25px;
+}
+.sign .email{
+  width: 360px;
+  height: 25px;
+}
+.sign .MuiSvgIcon-root{
+  color: #50b7f5;
+  font-size: 40px;
+}
+.sign .button{
+  padding: 5px 15px;
+  background-color: #e8f5fe;
+  border: 1px solid #50b7f5;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0px 0px 10px #50b7f5;
+  text-shadow: 0px 0px 1px black ;
+}
+
+.sign .button:hover{
+  background-color: #50b7f5;
+}
+.sign fieldset{
+  border: 1px solid white ;
+  box-shadow: 0px 0px 20px #50b7f5;
+}
+/* .sign legend{
+  font-size: 20px;
+  border: 1px solid #50b7f5;
+} */
+
+
+
+
+
+
+.sign .logo{
+  width: 250px;
+  height: 25px;
+}
+.sign .check{
+  display: flex;
+  justify-content: space-between;
+}
+.sign .field{
+  padding: 50px 30px;
+}
+.sign .buto{
+  width: 150px;
+  height: 35px;
+}
+.sign a{
+  text-decoration: none;
+}
+.sign a:hover{
+  border-bottom: 1px solid black ;
+}
+
+
+/* max-w-screen-sm */
+
+@media (max-width: 640px) {
+
+
+
+}
+
+
+
+
+
+
+
+/* max-w-screen-md */
+
+@media (max-width: 768px) {
+  .post__body img{
+    width: 260px;
   }
-  to {
-    transform: rotate(360deg);
+  .post{
+    overflow-x: hidden;
   }
+  .feed{
+    overflow-x: hidden;
+  } 
+  body{
+    overflow-x: hidden;
+  }
+  .sidebar{
+    display: none;
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+
+  .post__body img{
+    width: 260px;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  .sidebar{
+    border-right: 1px solid  #e8f5fe;
+    min-width: 200px;
+    margin-top: 20px;
+    padding-right: 20px;
+    padding-left: 0px; 
+  }
+  .widget{
+width:auto ;
+  }
+  .sidbar0ption h2{
+    font-weight: 800;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .widget__input{
+    display: flex;
+    align-items: center;
+    background-color: #e8f5fe;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+
+/* max-w-screen-lg */
+
+@media (min-width:768px) and (max-width: 960px) {
+
+  .post__body img{
+    width: 350px;
+  }
+  
+  body{
+    overflow-x: hidden;
+  }
+  .widget__input{
+    display: flex;
+    align-items: center;
+    background-color: #e8f5fe;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .sidebar{
+    display: none;
+  }
+}
+
+
+
+
+
+
+/* max-w-screen-xl */
+
+@media (min-width:1024px) and (max-width: 1275px){
+
+  .post__body img{
+    width: 300px;
+  }
+  body{
+    overflow-x: hidden;
+  }
+  .sidbar0ption h2{
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 20px;
+  }
+}
+@media (min-width:960px){
+  .feed__header .MuiSvgIcon-root{
+    display: none;
+  }
+
 }
